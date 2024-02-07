@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechScan</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="background-text">TechScan</div>
+
+        <label for="nombreInput" class="label">Nombre:</label>
+        <input type="text" id="nombreInput" class="input" placeholder="Escribe tu nombre">
+
+        <label for="edadInput" class="label">Edad:</label>
+        <input type="text" id="edadInput" class="input" placeholder="Escribe tu edad">
+
+        <label for="fechaNacimientoInput" class="label">Fecha de Nacimiento (dd/mm/aa):</label>
+        <input type="text" id="fechaNacimientoInput" class="input" placeholder="Escribe tu fecha de nacimiento">
+
+        <label for="lugarNacimientoInput" class="label">Lugar de Nacimiento:</label>
+        <input type="text" id="lugarNacimientoInput" class="input" placeholder="Escribe tu lugar de nacimiento">
+
+        <label for="telefonoInput" class="label">Número de Teléfono:</label>
+        <input type="text" id="telefonoInput" class="input" placeholder="Escribe tu número de teléfono">
+
+        <label for="telefonoFamiliarInput" class="label">Número de Teléfono de Familiar:</label>
+        <input type="text" id="telefonoFamiliarInput" class="input" placeholder="Escribe el número de teléfono de un familiar">
+
+        <label for="direccionInput" class="label">Dirección:</label>
+        <input type="text" id="direccionInput" class="input" placeholder="Escribe tu dirección">
+
+        <button onclick="generarCodigoQR()" class="button">Generar Código QR</button>
+
+        <!-- Contenedor para el código QR -->
+        <div id="codigoQR"></div>
+
+        <!-- Botón para generar el PDF -->
+        <button onclick="generarPDF()" class="button" id="generarPDFButton">Generar PDF</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="jspdf.min.js"></script>
+    <script type="text/javascript">
+        function genPDF(){
+            var doc=new jsPDF();
+            let mensaje=document.getElementById('esc').value;
+            doc.text(20,20,mensaje);
+            doc.addPage();
+            doc.text(20,20,'Mi trabajo!!');
+            doc.save('Test.pdf');
+        }
+    </script>
+</body>
+
+</html>
