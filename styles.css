@@ -1,0 +1,98 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #130f40;  /* Púrpura oscuro */
+    color: #ffffff;  /* Texto blanco */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alineación a la izquierda */
+    height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.1);  /* Fondo del contenedor con opacidad */
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);  /* Sombra suave */
+}
+
+.background-text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 120px;  /* Tamaño del texto en el fondo */
+    color: rgba(255, 255, 255, 0.5);  /* Blanco con opacidad */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);  /* Sombra suave */
+    opacity: 0.8;  /* Opacidad reducida */
+    z-index: -1;  /* Coloca el texto detrás del contenido principal */
+}
+
+.title {
+    color: #ff00cc;  /* Rosa púrpura */
+    text-align: left; /* Alineación a la izquierda */
+    font-size: 42px;  /* Tamaño del título */
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.label {
+    display: block;
+    margin-bottom: 5px;
+    color: #2ecc71;  /* Verde */
+    font-size: 18px;  /* Tamaño de la etiqueta */
+}
+
+.input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #6b3e99;  /* Púrpura más oscuro */
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: #ffffff;  /* Texto blanco */
+    background-color: rgba(255, 255, 255, 0.1);  /* Fondo del input con opacidad */
+    transition: border-color 0.3s, background-color 0.3s;  /* Agregada transición */
+}
+
+.input:focus {
+    border-color: #ff00cc;  /* Rosa púrpura al enfocar */
+    background-color: rgba(255, 255, 255, 0.2);  /* Fondo más claro al enfocar */
+}
+
+.button {
+    padding: 12px;
+    margin-top: 10px;  /* Añadido margen superior */
+    background-color: #00adb5;  /* Cian oscuro */
+    color: #ffffff;  /* Texto blanco */
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #00707c;  /* Cian más oscuro al pasar el ratón */
+}
+
+#contenedorQR {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#codigoQRContainer {
+    margin-top: 10px; /* Espacio entre el código QR y el botón */
+}
+
+#generarPDFButton {
+    margin-top: 10px; /* Espacio sobre el botón */
+}
